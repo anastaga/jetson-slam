@@ -1,7 +1,7 @@
-##Check OPENCV version: dpkg -l | grep libopencv
-Download SYNAPTIC Package manager to remove OpenCV 4.1. If it doesnt work after the installation of ros-melodic. Then use Synaptic to install the necessary dependancies.
+#Check OPENCV version: dpkg -l | grep libopencv
+**Download SYNAPTIC Package manager to remove OpenCV 4.1**. If it doesnt work after the installation of ros-melodic. Then use Synaptic to install the necessary dependancies.
 
-##Install Ceres Solver
+#Install Ceres Solver
 	sudo apt-get install libgoogle-glog-dev libgflags-dev	
 	sudo apt-get install libatlas-base-dev
 	sudo apt-get install libeigen3-dev
