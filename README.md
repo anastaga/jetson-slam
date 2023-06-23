@@ -19,8 +19,11 @@
 	git clone http://github.com/strasdat/Sophus.git
 	cd Sophus
 	git checkout a621ff
-	/Go to so2.cpp and change -> unit_comples_.real() = 1; and unit_comples_.ima() = 0; 
-with -> unit_complex_ = std::complex<double>(1,0);/
+ 
+	
+_Go to so2.cpp and change -> unit_comples_.real() = 1; and unit_comples_.ima() = 0; 
+with -> unit_complex_ = std::complex<double>(1,0);_
+
 	mkdir build
 	cd build
 	cmake ..
@@ -43,44 +46,32 @@ with -> unit_complex_ = std::complex<double>(1,0);/
 	sudo rosdep init
 	rosdep update
 	echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
-
-
-# (FIX)THERE WILL BE AN ERROR ON the next CATKIN_MAKE:
-	sudo gedit /opt/ros/melodic/share/cv_bridge/cmake/cv_bridgeConfig.cmake 
-
-change this line:
-	set(_include_dirs "include;/usr/include;/usr/include/opencv") 
-to
-	set(_include_dirs "include;/usr/include;/usr/include/opencv4")
 	
 
 
 # Install realsense-ros
-	#Step 1: Install RealSense™ SDK 2.0 https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md
-	#Step 2: https://github.com/IntelRealSense/realsense-ros/tree/ros1-legacy#step-2-install-intel-realsense-ros-from-sources
+	Step 1: Install RealSense™ SDK 2.0 (https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md)
+	Step 2: (https://github.com/IntelRealSense/realsense-ros/tree/ros1-legacy#step-2-install-intel-realsense-ros-from-sources)
 
-	Step1:
+# Install realsense-ros steps (previous links)
+```
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE || sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE
 sudo add-apt-repository "deb https://librealsense.intel.com/Debian/apt-repo $(lsb_release -cs) main" -u
 sudo apt-get install librealsense2-utils
 sudo apt-get install librealsense2-dev
-	Step2:
 cd ~/catkin_ws/src
 git clone https://github.com/IntelRealSense/realsense-ros.git
 cd realsense-ros/
 git checkout `git tag | sort -V | grep -P "^2.\d+\.\d+" | tail -1`
 cd .. 
 cd ..
-
 catkin_make clean
 catkin_make -DCATKIN_ENABLE_TESTING=False -DCMAKE_BUILD_TYPE=Release
 catkin_make install
-
-
+```
 
 # Install Vins-RGBD-Fast
 	git clone https://github.com/jianhengLiu/VINS-RGBD-FAST.git
-
 
 
 # Download Config file from midres github repo and replace
@@ -88,12 +79,16 @@ catkin_make install
 	Vins-RGBD-FAST: /home/midres/catkin_ws/src/VINS-RGBD-FAST/config/realsense/vio.yaml 
 	
 
-# Commands to run
-
+# Commands to run (in different terminals)
+```
 roslaunch vins_estimator vins_rviz.launch 
-roslaunch vins_estimator realsense_color.launch 
-roslaunch realsense2_camera rs_camera.launch enable_accel:=true enable_gyro:=true align_depth:=true unite_imu_method:=linear_interpolation color_width:=640 color_height:=480 color_fps:=15 depth_width:=640 depth_height:=480 depth_fps:=15
 
+roslaunch vins_estimator realsense_color.launch 
+
+roslaunch realsense2_camera rs_camera.launch enable_accel:=true enable_gyro:=true align_depth:=true
+unite_imu_method:=linear_interpolation color_width:=640 color_height:=480 color_fps:=15 depth_width:=640
+depth_height:=480 depth_fps:=15
+```
 
 
 
