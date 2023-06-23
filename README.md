@@ -1,6 +1,3 @@
-# midres-jetson
-Midres SLAM implemented in Jetson Xavier NX
-
 
 
 *Check OPENCV version: dpkg -l | grep libopencv
@@ -8,6 +5,9 @@ Midres SLAM implemented in Jetson Xavier NX
 *Uninstall OpenCV (https://askubuntu.com/questions/1339866/uninstall-opencv-4-2-0-and-its-libraries)
 	sudo apt purge libopencv 
 
+	or 
+
+Download SYNAPTIC Package manager to remove OpenCV and install libopencv for 3.2
 
 *Install Ceres Solver: 
 	sudo apt-get install libgoogle-glog-dev libgflags-dev	
@@ -42,7 +42,8 @@ with -> unit_complex_ = std::complex<double>(1,0);
 	sudo apt update
 	sudo apt install ros-melodic-desktop
 	sudo apt install ros-melodic-cv-bridge
-	sudo apt-get install ros-melodic-ddynamic-reconfigure
+	sudo apt install ros-melodic-ddynamic-reconfigure
+	sudo apt install ros-kinetic-pcl-ros
 	echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 	source ~/.bashrc
 	sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
@@ -60,11 +61,6 @@ change this line:
 to
 	set(_include_dirs "include;/usr/include;/usr/include/opencv4")
 	
-
-
-
-
-
 
 
 *Install realsense-ros:
@@ -100,9 +96,10 @@ catkin_make install
 	
 
 *Commands to run: 
-roslaunch realsense2_camera rs_camera.launch enable_accel:=true enable_gyro:=true align_depth:=true unite_imu_method:=linear_interpolation 
-roslaunch vins_estimator realsense_vio.launch
 
+roslaunch vins_estimator vins_rviz.launch 
+roslaunch vins_estimator 
+roslaunch realsense2_camera rs_camera.launch enable_accel:=true enable_gyro:=true align_depth:=true unite_imu_method:=linear_interpolation color_width:=640 color_height:=480 color_fps:=15 depth_width:=640 depth_height:=480 depth_fps:=15
 
 
 
