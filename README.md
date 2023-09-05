@@ -2,7 +2,7 @@
 **Download SYNAPTIC Package manager to remove OpenCV 4.1**. If it doesnt work after the installation of ros-melodic. Then use Synaptic to install the necessary dependancies.
 Check OPENCV version: ```dpkg -l | grep libopencv```
 
-# Install Ceres Solver
+## Install Ceres Solver
 	sudo apt-get install libgoogle-glog-dev libgflags-dev	
 	sudo apt-get install libatlas-base-dev
 	sudo apt-get install libeigen3-dev
@@ -16,7 +16,7 @@ Check OPENCV version: ```dpkg -l | grep libopencv```
 	sudo make install
 
 	
-# Install Sophus
+## Install Sophus
 	git clone http://github.com/strasdat/Sophus.git
 	cd Sophus
 	git checkout a621ff
@@ -31,7 +31,7 @@ with -> unit_complex_ = std::complex<double>(1,0);_
 	make 
 	sudo make install
 
-# Install Ros Melodic
+## Install Ros Melodic
 	sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 	sudo apt install curl # if you haven't already installed curl
 	curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
@@ -50,11 +50,11 @@ with -> unit_complex_ = std::complex<double>(1,0);_
 	
 
 
-# Install realsense-ros
+## Install realsense-ros
 	Step 1: Install RealSense™ SDK 2.0 (https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md)
 	Step 2: (https://github.com/IntelRealSense/realsense-ros/tree/ros1-legacy#step-2-install-intel-realsense-ros-from-sources)
 
-# Install realsense-ros steps (previous links)
+## Install realsense-ros steps (code from previous links)
 ```
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE || sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE
 sudo add-apt-repository "deb https://librealsense.intel.com/Debian/apt-repo $(lsb_release -cs) main" -u
@@ -71,12 +71,12 @@ catkin_make -DCATKIN_ENABLE_TESTING=False -DCMAKE_BUILD_TYPE=Release
 catkin_make install
 ```
 
-# Install Vins-RGBD-Fast
+## Install Vins-RGBD-Fast
 	git clone https://github.com/jianhengLiu/VINS-RGBD-FAST.git
 
 	
 
-# Run (each command should be run in a different terminal. Do not forget to connect the Realsense camera)
+## Run (each command should be run in a different terminal. Do not forget to connect the Realsense camera)
 ```
 roslaunch vins_estimator vins_rviz.launch 
 
@@ -91,6 +91,6 @@ depth_height:=480 depth_fps:=15
 
 
 _________________________
-## Communication
-# Install Mavros
+# Communication
+## Install Mavros
 sudo apt-get install ros-${ROS_DISTRO}-mavros ros-${ROS_DISTRO}-mavros-extras ros-${ROS_DISTRO}-mavros-msgs
