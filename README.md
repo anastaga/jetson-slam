@@ -74,13 +74,9 @@ catkin_make install
 # Install Vins-RGBD-Fast
 	git clone https://github.com/jianhengLiu/VINS-RGBD-FAST.git
 
-
-# Download Config file from midres github repo and replace
-	Vins-RGBD: 
-	Vins-RGBD-FAST: /home/midres/catkin_ws/src/VINS-RGBD-FAST/config/realsense/vio.yaml 
 	
 
-# Commands to run (in different terminals)
+# Run (each command should be run in a different terminal. Do not forget to connect the Realsense camera)
 ```
 roslaunch vins_estimator vins_rviz.launch 
 
