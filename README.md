@@ -38,7 +38,7 @@ This project integrates advanced SLAM and thermal imaging systems into UAVs, bui
 
 _______
 
-## Install the base slam we used, along with the Realsense d435i Camera Integration on Jetson Xavier NX
+## Install the base SLAM we used, along with the Realsense d435i Camera Integration on Jetson Xavier NX
 
 
 ## Install Ros Melodic
