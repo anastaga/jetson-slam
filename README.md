@@ -130,7 +130,7 @@ depth_height:=480 depth_fps:=15
 _________________________
 # Thermal Camera and Human Presence Detection
 
-Due to the proprietary nature of the thermal camera's APK, we are unable to share the specific code we developed. However, we provide a general outline of our methodology below.
+Due to the proprietary nature of the thermal camera's SDK, we are unable to share the specific code we developed. However, we provide a general outline of our methodology below.
 
 ## Process Overview
 
