@@ -6,13 +6,42 @@
 
 [🎥 Watch the Full Video Here!](https://www.youtube.com/watch?v=JHDNFKczD44)
 
+## Procedure followed
+
+Advanced Simulation:
+Initial stage involved setting up Hector_SLAM within the Gazebo simulation environment.
+Integration of the Realsense d435i and a thermal camera, testing their capabilities in a simulated setting.
+
+Neural Network Training and Optimization:
+Employed Yolov8 for RPN, trained on a diverse dataset of around 10,000 thermal images.
+Focus on balancing efficiency and accuracy, essential for real-time human detection.
+
+Hardware Implementation and Calibration:
+Transitioned to real-world application with Jetson Xavier NX.
+Integrated COIN417G2 thermal camera and Realsense d435i, focusing on calibration for accurate data capture.
+
+Flight Control and SLAM System Integration:
+Connected with Cube Orange flight controller, utilizing MAVROS for IMU data integration.
+The system was refined to send back obstacle data, enhancing the drone's autonomous navigation capabilities.
+
+Algorithm Customization for Real-Time Processing:
+Tailored the Yolov8 algorithm to suit the real-time processing requirements.
+Ensured the algorithm's compatibility with the Jetson Xavier NX's processing capabilities.
+
+Flight Test
+The test flights demonstrated the system's high level of functionality and efficiency. During these flights, the UAV successfully utilized the integrated SLAM system and thermal camera for navigation and human detection. The real-time processing capabilities of the Jetson Xavier NX were effectively showcased, ensuring smooth operation even in complex environments. The combination of obstacle detection and avoidance, along with accurate human presence identification, highlighted the system's robustness and potential for practical applications in search and rescue operations or similar scenarios.
 
 
 
 
+
+## Overview
+This project enhances UAV capabilities by integrating advanced SLAM and thermal imaging systems. It's inspired by and builds upon the VINS_RGBD SLAM system.
+
+## Vins_RGBD SLAM System
+The backbone of our pipeline is heavily influenced by the VINS_RGBD SLAM system. Our modifications, tailored to the unique demands of UAV navigation and real-time processing, are based on this robust framework. This approach enabled us to harness the strengths of Vins_RGBD, adapting it to suit our specialized objectives, particularly in the realm of enhanced navigation and efficient thermal image processing.
 
 ## TO INSTALL THE BASE SLAM THAT WE USED ALONG WITH THE REALSENSE D435i CAMERA
-
 
 **Download SYNAPTIC Package manager to remove OpenCV 4.1**. If it doesnt work after the installation of ros-melodic. Then use Synaptic to install the necessary dependancies.
 Check OPENCV version: ```dpkg -l | grep libopencv```
@@ -86,8 +115,8 @@ catkin_make -DCATKIN_ENABLE_TESTING=False -DCMAKE_BUILD_TYPE=Release
 catkin_make install
 ```
 
-## Install Vins-RGBD-Fast
-	git clone https://github.com/jianhengLiu/VINS-RGBD-FAST.git
+## Install Vins-RGBD
+	git clone https://github.com/jianhengLiu/VINS-RGBD.git
 
 	
 
