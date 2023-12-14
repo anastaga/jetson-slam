@@ -7,7 +7,7 @@
 
 
 
-## TO INSTALL
+## TO INSTALL THE BASE SLAM THAT WE USED ALONG WITH THE REALSENSE D435i CAMERA
 
 
 **Download SYNAPTIC Package manager to remove OpenCV 4.1**. If it doesnt work after the installation of ros-melodic. Then use Synaptic to install the necessary dependancies.
