@@ -1,7 +1,7 @@
 # Autonomous UAV with RGBD-Inertial Slam and Thermal Camera for Human Detection in Jetson Xavier NX
 
 ## Overview
-This project integrates advanced SLAM and thermal imaging systems into UAVs, building upon the VINS_RGBD SLAM system, and adapting it for enhanced navigation and real-time image processing.
+This project integrates advanced SLAM and thermal imaging systems into UAVs, building upon the [VINS_RGBD](https://github.com/jianhengLiu/VINS-RGBD.git) SLAM system, and adapting it for enhanced navigation and real-time image processing.
 
 ## Test Flight Results
 ![Midres Test Flight](https://github.com/anastaga/midres-jetson/blob/main/MIDRES-test-flight.gif?raw=true)
@@ -12,7 +12,7 @@ This project integrates advanced SLAM and thermal imaging systems into UAVs, bui
 
 ### Advanced Simulation
 - Setup Quadcopter Simulation in Gazebo [Hector_Quadrotor](https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor).
-- Integrate Realsense d435i camera using the Reasense SDK and a custom thermal camera plugin in simulation.
+- Integrate Realsense d435i camera using the [Reasense SDK](https://github.com/IntelRealSense/realsense-ros) and a custom thermal camera plugin in simulation.
 
 
 ### Neural Network Training and Optimization
