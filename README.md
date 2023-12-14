@@ -1,4 +1,4 @@
-# UAV SLAM and Thermal Imaging Project
+# Autonomous UAV with RGBD-Inertial Slam and Thermal Camera Human Detection in Jetson Xavier NX
 
 ## Overview
 This project integrates advanced SLAM and thermal imaging systems into UAVs, building upon the VINS_RGBD SLAM system, and adapting it for enhanced navigation and real-time image processing.
