@@ -5,6 +5,7 @@ This project integrates advanced SLAM and thermal imaging systems into UAVs, bui
 
 ## Test Flight Results
 ![Midres Test Flight](https://github.com/anastaga/midres-jetson/blob/main/MIDRES-test-flight.gif?raw=true)
+
 [🎥 Watch the Full Video Here!](https://www.youtube.com/watch?v=JHDNFKczD44)
 
 ## Procedure
