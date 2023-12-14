@@ -1,45 +1,36 @@
-
-## TEST FLIGHT RESULTS
-
-![Midres Test Flight](https://github.com/anastaga/midres-jetson/blob/main/MIDRES-test-flight.gif?raw=true)
-
-
-[🎥 Watch the Full Video Here!](https://www.youtube.com/watch?v=JHDNFKczD44)
-
-## Procedure followed
-
-Advanced Simulation:
-Initial stage involved setting up Hector_SLAM within the Gazebo simulation environment.
-Integration of the Realsense d435i and a thermal camera, testing their capabilities in a simulated setting.
-
-Neural Network Training and Optimization:
-Employed Yolov8 for RPN, trained on a diverse dataset of around 10,000 thermal images.
-Focus on balancing efficiency and accuracy, essential for real-time human detection.
-
-Hardware Implementation and Calibration:
-Transitioned to real-world application with Jetson Xavier NX.
-Integrated COIN417G2 thermal camera and Realsense d435i, focusing on calibration for accurate data capture.
-
-Flight Control and SLAM System Integration:
-Connected with Cube Orange flight controller, utilizing MAVROS for IMU data integration.
-The system was refined to send back obstacle data, enhancing the drone's autonomous navigation capabilities.
-
-Algorithm Customization for Real-Time Processing:
-Tailored the Yolov8 algorithm to suit the real-time processing requirements.
-Ensured the algorithm's compatibility with the Jetson Xavier NX's processing capabilities.
-
-Flight Test
-The test flights demonstrated the system's high level of functionality and efficiency. During these flights, the UAV successfully utilized the integrated SLAM system and thermal camera for navigation and human detection. The real-time processing capabilities of the Jetson Xavier NX were effectively showcased, ensuring smooth operation even in complex environments. The combination of obstacle detection and avoidance, along with accurate human presence identification, highlighted the system's robustness and potential for practical applications in search and rescue operations or similar scenarios.
-
-
-
-
+# UAV SLAM and Thermal Imaging Project
 
 ## Overview
-This project enhances UAV capabilities by integrating advanced SLAM and thermal imaging systems. It's inspired by and builds upon the VINS_RGBD SLAM system.
+This project integrates advanced SLAM and thermal imaging systems into UAVs, building upon the VINS_RGBD SLAM system, and adapting it for enhanced navigation and real-time image processing.
 
-## Vins_RGBD SLAM System
-The backbone of our pipeline is heavily influenced by the VINS_RGBD SLAM system. Our modifications, tailored to the unique demands of UAV navigation and real-time processing, are based on this robust framework. This approach enabled us to harness the strengths of Vins_RGBD, adapting it to suit our specialized objectives, particularly in the realm of enhanced navigation and efficient thermal image processing.
+## Test Flight Results
+![Midres Test Flight](https://github.com/anastaga/midres-jetson/blob/main/MIDRES-test-flight.gif?raw=true)
+[🎥 Watch the Full Video Here!](https://www.youtube.com/watch?v=JHDNFKczD44)
+
+## Procedure
+
+### Advanced Simulation
+- Setup Hector_SLAM in Gazebo.
+- Integrate Realsense d435i and thermal camera in simulation.
+
+### Neural Network Training and Optimization
+- Employ Yolov8 for RPN, trained on ~10,000 thermal images.
+- Balance efficiency and accuracy for real-time human detection.
+
+### Hardware Implementation and Calibration
+- Transition to real-world application with Jetson Xavier NX.
+- Integrate COIN417G2 thermal camera and Realsense d435i.
+
+### Flight Control and SLAM System Integration
+- Connect with Cube Orange flight controller via MAVROS.
+- Refine system to send back obstacle data for navigation.
+
+### Algorithm Customization
+- Tailor Yolov8 for real-time processing on Jetson Xavier NX.
+
+### Flight Test
+- Test flights showcased system functionality and efficiency in complex environments.
+
 
 ## TO INSTALL THE BASE SLAM THAT WE USED ALONG WITH THE REALSENSE D435i CAMERA
 
@@ -159,8 +150,10 @@ We developed a ROS node that subscribes to the Thermal Camera Node. This node pr
 
 
 _________________________
-# Communication Protocols 
-To-do page on how to connect to the Flight Controller and exchange the proper messages for e.g. obstacle avoidance or IMU.
+## Communication Protocols
+Guide for connecting to the Flight Controller and exchanging messages for tasks like obstacle avoidance.
+(to-do)
+
 ## Install Mavros
 ```
 sudo apt-get install ros-${ROS_DISTRO}-mavros ros-${ROS_DISTRO}-mavros-extras ros-${ROS_DISTRO}-mavros-msgs
@@ -168,5 +161,3 @@ wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/inst
 sudo bash ./install_geographiclib_datasets.sh
 
 ```
-
-
