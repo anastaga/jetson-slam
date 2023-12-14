@@ -1,3 +1,9 @@
+[![Midres Flight Slam Thermal](https://img.youtube.com/vi/JHDNFKczD44/0.jpg)](https://www.youtube.com/watch?v=JHDNFKczD44 "Midres Flight Slam Thermal")
+
+
+
+
+
 
 **Download SYNAPTIC Package manager to remove OpenCV 4.1**. If it doesnt work after the installation of ros-melodic. Then use Synaptic to install the necessary dependancies.
 Check OPENCV version: ```dpkg -l | grep libopencv```
