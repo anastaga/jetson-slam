@@ -34,6 +34,9 @@ This project integrates advanced SLAM and thermal imaging systems into UAVs, bui
 - Test flights showcased system functionality and efficiency in complex environments.
 
 
+
+
+_______
 ## TO INSTALL THE BASE SLAM WE USED, ALONG WITH THE REALSENSE D435i CAMERA INTEGRATION ON JETSON XAVIER NX
 
 
