@@ -11,11 +11,12 @@ This project integrates advanced SLAM and thermal imaging systems into UAVs, bui
 ## Procedure
 
 ### Advanced Simulation
-- Setup Hector_SLAM in Gazebo.
-- Integrate Realsense d435i and thermal camera in simulation.
+- Setup Quadcopter Simulation in Gazebo [Hector_Quadrotor](https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor).
+- Integrate Realsense d435i camera using the Reasense SDK and a custom thermal camera plugin in simulation.
+
 
 ### Neural Network Training and Optimization
-- Employ Yolov8 for RPN, trained on ~10,000 thermal images.
+- Employ pretrained Yolov8 for RPN, re-trained on ~10,000 thermal images.
 - Balance efficiency and accuracy for real-time human detection.
 
 ### Hardware Implementation and Calibration
@@ -24,7 +25,7 @@ This project integrates advanced SLAM and thermal imaging systems into UAVs, bui
 
 ### Flight Control and SLAM System Integration
 - Connect with Cube Orange flight controller via MAVROS.
-- Refine system to send back obstacle data for navigation.
+- Refine system to send back obstacle data for navigation and receive IMU data.
 
 ### Algorithm Customization
 - Tailor Yolov8 for real-time processing on Jetson Xavier NX.
@@ -33,8 +34,26 @@ This project integrates advanced SLAM and thermal imaging systems into UAVs, bui
 - Test flights showcased system functionality and efficiency in complex environments.
 
 
-## TO INSTALL THE BASE SLAM THAT WE USED ALONG WITH THE REALSENSE D435i CAMERA
+## TO INSTALL THE BASE SLAM WE USED, ALONG WITH THE REALSENSE D435i CAMERA INTEGRATION ON JETSON XAVIER NX
 
+
+## Install Ros Melodic
+	sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+	sudo apt install curl # if you haven't already installed curl
+	curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+	sudo apt update
+	sudo apt install ros-melodic-desktop
+	sudo apt install ros-melodic-cv-bridge
+	sudo apt install ros-melodic-ddynamic-reconfigure
+	sudo apt install ros-kinetic-pcl-ros
+	echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+	source ~/.bashrc
+	sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
+	sudo apt install python-rosdep
+	sudo rosdep init
+	rosdep update
+	echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+	
 **Download SYNAPTIC Package manager to remove OpenCV 4.1**. If it doesnt work after the installation of ros-melodic. Then use Synaptic to install the necessary dependancies.
 Check OPENCV version: ```dpkg -l | grep libopencv```
 
@@ -66,25 +85,6 @@ with -> unit_complex_ = std::complex<double>(1,0);_
 	cmake ..
 	make 
 	sudo make install
-
-## Install Ros Melodic
-	sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-	sudo apt install curl # if you haven't already installed curl
-	curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
-	sudo apt update
-	sudo apt install ros-melodic-desktop
-	sudo apt install ros-melodic-cv-bridge
-	sudo apt install ros-melodic-ddynamic-reconfigure
-	sudo apt install ros-kinetic-pcl-ros
-	echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
-	source ~/.bashrc
-	sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
-	sudo apt install python-rosdep
-	sudo rosdep init
-	rosdep update
-	echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
-	
-
 
 ## Install realsense-ros
 	Step 1: Install RealSense™ SDK 2.0 (https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md)
