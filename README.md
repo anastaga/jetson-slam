@@ -1,4 +1,5 @@
-[![Midres Flight Slam Thermal](https://img.youtube.com/vi/JHDNFKczD44/0.jpg)](https://www.youtube.com/watch?v=JHDNFKczD44 "Midres Flight Slam Thermal")
+
+![Alt text for the GIF](https://github.com/anastaga/midres-jetson/blob/main/MIDRES-test-flight.gif?raw=true)
 
 
 
