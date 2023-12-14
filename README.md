@@ -93,6 +93,10 @@ depth_height:=480 depth_fps:=15
 _________________________
 # Communication
 ## Install Mavros
+```
 sudo apt-get install ros-${ROS_DISTRO}-mavros ros-${ROS_DISTRO}-mavros-extras ros-${ROS_DISTRO}-mavros-msgs
 wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
-sudo bash ./install_geographiclib_datasets.sh   
+sudo bash ./install_geographiclib_datasets.sh
+
+```
+
