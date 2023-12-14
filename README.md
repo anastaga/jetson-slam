@@ -102,11 +102,36 @@ unite_imu_method:=linear_interpolation color_width:=640 color_height:=480 color_
 depth_height:=480 depth_fps:=15
 ```
 
+_________________________
+# Thermal Camera and Human Presence Detection
+
+Due to the proprietary nature of the thermal camera's APK, we are unable to share the specific code we developed. However, we provide a general outline of our methodology below.
+
+## Process Overview
+
+### 1. Image Acquisition and Conversion
+The process begins with acquiring an image from the thermal camera. This image is then converted into a format compatible with OpenCV for further processing.
+
+### 2. ROS Node Initialization
+A ROS (Robot Operating System) node is established to initiate the entire process. This node is crucial for managing the image data and interfacing with other system components.
+
+### 3. Utilizing Yolov8 for Object Detection
+For human detection, we utilized a pretrained Yolov8 model, specifically its lightweight version, to balance processing efficiency with accuracy. Our model was trained on a dataset of approximately 10,000 thermal images, including both human and non-human subjects, sourced from various online resources.
+
+### 4. Training and Configuration
+The training phase was conducted with careful attention to ensure the model configurations were set appropriately for accurate human detection.
+
+### 5. Setting Up the Jetson Xavier NX
+A virtual environment was set up on the Jetson Xavier NX, tailored to the specific Python version required for Yolov8. All necessary libraries and requirements were installed, following the guidelines on the [Yolov8 GitHub page](https://github.com/ultralytics/ultralytics).
+
+### 6. ROS Node for Image Processing
+We developed a ROS node that subscribes to the Thermal Camera Node. This node processes the thermal image through the Yolov8 network to detect human presence.
 
 
 
 _________________________
-# Communication
+# Communication Protocols 
+To-do page on how to connect to the Flight Controller and exchange the proper messages for e.g. obstacle avoidance or IMU.
 ## Install Mavros
 ```
 sudo apt-get install ros-${ROS_DISTRO}-mavros ros-${ROS_DISTRO}-mavros-extras ros-${ROS_DISTRO}-mavros-msgs
@@ -114,4 +139,5 @@ wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/inst
 sudo bash ./install_geographiclib_datasets.sh
 
 ```
+
 
