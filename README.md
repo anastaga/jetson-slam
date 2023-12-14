@@ -1,5 +1,5 @@
 
-##TEST FLIGHT RESULTS
+## TEST FLIGHT RESULTS
 
 ![Midres Test Flight](https://github.com/anastaga/midres-jetson/blob/main/MIDRES-test-flight.gif?raw=true)
 
@@ -7,7 +7,7 @@
 
 
 
-##TO INSTALL
+## TO INSTALL
 
 
 **Download SYNAPTIC Package manager to remove OpenCV 4.1**. If it doesnt work after the installation of ros-melodic. Then use Synaptic to install the necessary dependancies.
