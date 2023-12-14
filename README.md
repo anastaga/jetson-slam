@@ -1,5 +1,5 @@
 
-![Alt text for the GIF](https://github.com/anastaga/midres-jetson/blob/main/MIDRES-test-flight.gif?raw=true)
+![Midres Test Flight](https://github.com/anastaga/midres-jetson/blob/main/MIDRES-test-flight.gif?raw=true)
 
 
 
