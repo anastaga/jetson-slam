@@ -157,7 +157,7 @@ We developed a ROS node that subscribes to the Thermal Camera Node. This node pr
 _________________________
 ## Communication Protocols
 Guide for connecting to the Flight Controller and exchanging messages for tasks like obstacle avoidance.
-(to-do)
+_(TO-DO)_
 
 ## Install Mavros
 ```
