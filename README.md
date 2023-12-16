@@ -6,9 +6,11 @@ _This project was developed as part of my work as a Researcher in Democritus Uni
 This project integrates advanced SLAM and thermal imaging systems into UAVs, building upon the [VINS_RGBD](https://github.com/jianhengLiu/VINS-RGBD.git) SLAM system, and adapting it for enhanced navigation and real-time image processing.
 
 ## Test Flight Results
-![Midres Test Flight](https://github.com/anastaga/midres-jetson/blob/main/MIDRES-test-flight.gif?raw=true)
+![Midres Test Flight](https://github.com/anastaga/jetson-slam/blob/main/midres_flight.gif?raw=true)  
 
-[🎥 Watch the Full Video Here!](https://www.youtube.com/watch?v=JHDNFKczD44)
+![Midres Test Flight](https://github.com/anastaga/jetson-slam/blob/main/midres_flight_simulation.gif?raw=true)  
+
+
 
 ## Procedure
 
