@@ -16,7 +16,9 @@ _(sped up x4)_
 
 ### Advanced Simulation
 - Setup Quadcopter Simulation in Gazebo [Hector_Quadrotor](https://github.com/tu-darmstadt-ros-pkg/hector_quadrotor).
-- Integrate Realsense d435i camera using the [Reasense SDK](https://github.com/IntelRealSense/realsense-ros) and a custom thermal camera plugin we created, in the simulation environment.
+- Integrate the Realsense d435i RGB-D camera using the [Reasense SDK](https://github.com/IntelRealSense/realsense-ros) and a custom thermal camera plugin we created, in the simulation environment.
+- Calibrate and synchronize RGB-D camera with IMU using Kalman Filters
+- Setup VINS Slam and tailor it to our needs.
 
 
 ### Neural Network Training and Optimization
