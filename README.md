@@ -10,7 +10,7 @@ This project integrates advanced SLAM and thermal imaging systems into UAVs, bui
 
 ![Midres Test Flight](https://github.com/anastaga/jetson-slam/blob/main/midres_flight_simulation.gif?raw=true)  
 
-
+_(sped up x4)_
 
 ## Procedure
 
